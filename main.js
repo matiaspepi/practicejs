@@ -29,6 +29,29 @@ function agregarAlCarrito() {
         otroProducto = confirm("¿Queres agregar otro producto?")
 
     } while (otroProducto);
-    resultado = confirm ("El total de la compra es:" + total + "$");
+    console.log(total);
+}
+function aplicarDescuento(total) {
+    if (total >= 5000) {
+        total = total * 0.80;
+    }
+
+    return total
+}
+
+function calcularEnvio(total) {
+    let confirmacion = confirm("¿Querés envío a domicilio?");
+
+    if (confirmacion && total >= 2000) {
+      alert("Tenés envio gratis. El total de tu compra es $" + total);
+    } else if (confirmacion && total < 2000 && total != 0) {
+      total = total + 700;
+      alert("El envío cuesta $700. El total de tu compra es $" + total);
+    } else {
+      alert("El total de tu compra es $" + total);
+    }
+
+    return total;
 }
 agregarAlCarrito();
+calcularEnvio(aplicarDescuento(total));
