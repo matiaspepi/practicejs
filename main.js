@@ -1,60 +1,4 @@
-// let total = 0;
-// let precio = 0;
-// let otroProducto = false;
 
-// function agregarAlCarrito() {
-
-//     do {
-
-//         let producto = prompt("¿Querés comprar shampoo, acondicionador o ambos?", "Ej: ambos");
-//         let cantidad = parseInt(prompt("¿Cuantos queres comprar?", 0));
-
-//         switch (producto) {
-//             case "shampoo":
-//                 precio = 500;
-//                 break;
-//             case "acondicionador":
-//                 precio = 700;
-//                 break;
-//             case "ambos":
-//                 precio = 1100;
-//                 break;
-//             default:
-//                 alert("Algunos de los datos ingresados no son correctos");
-//                 precio = 0;
-//                 cantidad = 0;
-//         }
-
-//         total = total + precio * cantidad;
-//         otroProducto = confirm("¿Queres agregar otro producto?")
-
-//     } while (otroProducto);
-//     console.log(total);
-// }
-// function aplicarDescuento(total) {
-//     if (total >= 5000) {
-//         total = total * 0.80;
-//     }
-
-//     return total
-// }
-
-// function calcularEnvio(total) {
-//     let confirmacion = confirm("¿Querés envío a domicilio?");
-
-//     if (confirmacion && total >= 2000) {
-//       alert("Tenés envio gratis. El total de tu compra es $" + total);
-//     } else if (confirmacion && total < 2000 && total != 0) {
-//       total = total + 700;
-//       alert("El envío cuesta $700. El total de tu compra es $" + total);
-//     } else {
-//       alert("El total de tu compra es $" + total);
-//     }
-
-//     return total;
-// }
-// agregarAlCarrito();
-// calcularEnvio(aplicarDescuento(total));
 class Producto {
     constructor (nombre, precio, stock){
         this.nombre= nombre;
@@ -72,9 +16,9 @@ class Producto {
 }
 
 const arrayProductos = [];
-arrayProductos.push(new Producto ("shampoo", 900, 10));
-arrayProductos.push(new Producto ("acondicionador", 700, 10));
-arrayProductos.push(new Producto ("ambos", 1100, 15));
+arrayProductos.push(new Producto ("Buzo", 900, 10));
+arrayProductos.push(new Producto ("Pantalon", 700, 10));
+arrayProductos.push(new Producto ("Camisa", 1100, 15));
 
 
 
@@ -85,7 +29,7 @@ function agregarAlCarrito() {
 
     //Ciclo para sumar productos al carrito
     do {
-        let producto = prompt ("¿Querés comprar shampoo, acondicionador o ambos?", "Ej: ambos");
+        let producto = prompt ("¿Querés comprar Buzo, Pantalon o Camisa?", "Ej: ambos");
         let cantidad = parseInt(prompt ("¿Cuántos querés comprar?"));
         let precio;
 
@@ -94,11 +38,11 @@ function agregarAlCarrito() {
                 arrayProductos[0].actualizarStock(cantidad);
                 if (arrayProductos[0].stock < 0 || Number.isNaN(cantidad)){
                     alert("Lo sentimos. En este momento no tenemos stock")
-                    arrayProductos[0].stock = arrayProductos[0].stock + cantidad;
+                    arrayProductos[0].stock =arrayProductos[0].stock + cantidad;
                     precio = 0;
                     cantidad = 0;
                 }else{
-                    precio = arrayProductos[0].precio;
+                    precio =arrayProductos[0].precio;
                 }
                 break;
             case arrayProductos[1].nombre:
@@ -193,6 +137,54 @@ function totalAPagar (total, cuotas, intereses) {
     alert ("El total a pagar es $"+total+" en "+cuotas+" cuotas de $"+valorCuota);
 }
 
+ PRODUCTS =
+[
+    {
+        id: 1,
+        nombre: "Buzo",
+        tipo: "buzo",
+        precio: 1200,
+        talle: "L",
+        cantidad:1
+    },
 
+    {
+        id: 2,
+        nombre: "Pantalon",
+        tipo: "remera",
+        precio: 500,
+        talle: "L",
+        cantidad:1
+    },
+
+    {
+        id: 3,
+        nombre: "Camisa",
+        tipo: "camisa",
+        precio: 900,
+        talle: "S",
+        cantidad:1
+    },
+
+  
+]
+
+//Precio: Mayor a menor
+function ordenarMayorMenor(){
+
+    PRODUCTS.sort((a,b)=> b.precio - a.precio);
+    console.log(PRODUCTS);
+    mostrarListaOrdenada();
+}
+
+function mostrarListaOrdenada(){
+    let array = [];
+    for (i=0; i<PRODUCTS.length; i++){
+        array.push(PRODUCTS[i].nombre+" $"+PRODUCTS[i].precio);
+    }
+    alert("Lista de precios:"+"\n"+array.join("\n"))
+}
+
+ordenarMayorMenor();
 agregarAlCarrito();
 totalAPagar(calcularEnvio(calcularDescuento(total)), cantidadCuotas(), calcularIntereses(cuotas))
