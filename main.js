@@ -16,9 +16,9 @@ class Producto {
 }
 
 const arrayProductos = [];
-arrayProductos.push(new Producto ("Buzo", 900, 10));
-arrayProductos.push(new Producto ("Pantalon", 700, 10));
-arrayProductos.push(new Producto ("Camisa", 1100, 15));
+arrayProductos.push(new Producto ("Buzo", 1200, 10));
+arrayProductos.push(new Producto ("Pantalon", 2000, 10));
+arrayProductos.push(new Producto ("Camisa", 3500, 15));
 
 
 
@@ -152,7 +152,7 @@ function totalAPagar (total, cuotas, intereses) {
         id: 2,
         nombre: "Pantalon",
         tipo: "remera",
-        precio: 500,
+        precio: 2000,
         talle: "L",
         cantidad:1
     },
@@ -161,7 +161,7 @@ function totalAPagar (total, cuotas, intereses) {
         id: 3,
         nombre: "Camisa",
         tipo: "camisa",
-        precio: 900,
+        precio: 3500,
         talle: "S",
         cantidad:1
     },
