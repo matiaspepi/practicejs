@@ -11,12 +11,12 @@ const mostrarProductos = (productos) => {
     div.classList.add('card');
     div.innerHTML += `<div class="card-image">
                         <img src=${producto.img}>
-                        <span class="card-title">${producto.nombre}</span>
+                        <span class="card-title">${producto.marca}</span>
                         <a class="btn-floating halfway-fab wabes-effect waves-light red" id=boton${producto.id}><i class="material-icons">add_shopping_cart</i></a>
                       </div>
                       <div class="card-content">
-                          <p>Talle: ${producto.talle}</p>
-                          <p>${producto.precio}</p>
+                          <p>${producto.modelo}</p>
+                          <p>Precio: ${producto.precio} </p>
                       </div>
                       `
     contenedorProductos.appendChild(div);

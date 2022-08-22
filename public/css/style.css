@@ -6,6 +6,11 @@
   
   body {
     font-family: 'Roboto', sans-serif;
+    background-image: url("/public/images/imagen-fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
   }
   
   img {
@@ -19,22 +24,51 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
+    width: 100%;
+    background-image: linear-gradient(-60deg, #fa3636 0%, #fae104 100%);
     /* box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; */
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     /* margin-bottom: 20px; */
   }
   
   h1 {
-    color: rgb(0,0,0,1);
+    /* color: rgb(255,255,255);
     text-transform: uppercase;
     font-weight: 500px;
     font-size: 30px;
-    margin: 0;
+    margin: 0; */
+    position: relative;
+    font-size: 2rem;
+    font-family: sans-serif;
+    -webkit-text-stroke: 0.3vw rgb(255,255,255);
+    text-transform: uppercase;
+  }
+  h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color:  rgb(240, 89, 51);
+    -webkit-text-stroke: 0vw rgb(240, 89, 51);
+    border-right: 4px solid rgb(240, 89, 51);
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+    -webkit-animation: animate 6s linear infinite;
+  }
+  @keyframes animate {
+    0% {
+      width: 0%;
+    }
+    70% {
+      width: 100%;
+    }
   }
   
   #cesta-carrito {
     border: none;
-    color: rgb(0,0,0,1);
+    color: rgb(240, 89, 51);
     font-size: 30px;
     background-color: white;
     border-radius: 50%;
@@ -44,7 +78,7 @@
   
   #cesta-carrito:hover {
     cursor: pointer;
-    color: white;
+    color: rgb(247, 91, 52);
     background-color: rgb(0,0,0,1);
   }
   
@@ -71,6 +105,7 @@
     padding: 10px;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background-image: linear-gradient(-60deg, #fa3636 0%, #fae104 100%);
   }
   
   select {
@@ -101,7 +136,7 @@
   
   .modal-carrito {
     position: relative;
-    background-color: white;
+    background-image: linear-gradient(-60deg, #fa3636 0%, #fae104 100%);
     min-width: 500px;
     padding: 20px;
     margin-top: -100%;
@@ -115,7 +150,7 @@
   }
   
   .modal-carrito h3 {
-    color: rgb(0,0,0,1);
+    color: rgb(255,255,255);
     padding-bottom: 5px;
   }
   
@@ -124,9 +159,9 @@
     top: 15px;
     right: 15px;
     font-size: 20px;
-    color: rgb(0,0,0,1) !important;
+    color: rgb(255,255,255) !important;
     border: none;
-    background-color: white;
+    background-color: #fa5336;
   }
   
   .modal-carrito #btn-cerrar-carrito:hover {
@@ -137,23 +172,29 @@
     outline: none;
   }
   
-  .modal-carrito .producto-precio {
+  .modal-carrito .precioProducto {
     padding-top: 10px;
+    color: rgba(255,255,255);
   }
   
   .card .card-image .card-title {
-    color: rgb(0,0,0,1);;
-    position: unset
+    color: rgb(255,255,255);
+    position: unset;
+    font-size: 21.6px;
   }
   
   .productoEnCarrito {
-    border-left: 5px solid lightblue;
+    border-left: 5px solid white;
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
     margin: 5px 0;
     padding: 5px 10px;
     display: flex;
     justify-content: space-between;
+
+  }
+  .productoEnCarrito p {
+    color: rgba(255,255,255);
   }
   
   .productoEnCarrito:hover {
@@ -161,8 +202,8 @@
   }
   
   .boton-eliminar {
-    background-color: white;
-    color: rgb(0,0,0,1);
+    background-color: #fa5336;
+    color: rgb(255,255,255);
     border: none;
     font-size: 20px;
   }
@@ -173,4 +214,11 @@
   
   .boton-eliminar:focus {
     outline: none;
+  }
+  .card-content p{
+    color: rgba(255,255,255);
+    font-size: 16px;
+  }
+  .material-icons {
+    background-image: linear-gradient(-60deg, #fa3636 0%, #fae104 100%);
   }
