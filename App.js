@@ -1,8 +1,11 @@
+
 import { carritoIndex } from "./carritoIndex.js";
-import { productos } from "./stock.js";
-export const mostrarProductos = (productos) => {
+import { getData } from "./getData.js";
+
+export const mostrarProductos = async () => {
 
   const contenedorProductos = document.getElementById("producto-contenedor");
+  const productos = await getData();
 
   productos.forEach(producto => {
     const div = document.createElement('div');
@@ -32,7 +35,3 @@ export const mostrarProductos = (productos) => {
     });
   });
 };
-
-
-
-mostrarProductos(productos);
