@@ -4,7 +4,7 @@
         "marca": "Paleta Adiddas",
         "modelo": "Match Light 3.1",
         "precio": 11268,
-        "img": "/public/images/paleta-uno.jpg",
+        "img": "/public/images/paleta-uno-bis.png",
         "cantidad":1
     },
 
@@ -13,7 +13,7 @@
         "marca": "Paleta Wilson",
         "modelo": "Ws 10.23",
         "precio": 23899,
-        "img": "/public/images/paleta-dos.jfif",
+        "img": "/public/images/paleta-dos-bis.png",
         "cantidad":1
     },
 
@@ -22,7 +22,7 @@
         "marca": "Paleta Vairo",
         "modelo": "Reno 7.3",
         "precio": 22699,
-        "img": "/public/images/paleta-tres.jfif",
+        "img": "/public/images/paleta-tres-bis.png",
        " cantidad":1
     },
 
@@ -31,7 +31,7 @@
         "marca": "Paleta Adiddas",
         "modelo": "Kaltom ATTK",
         "precio": 12788,
-        "img": "/public/images/paleta-cuatro.jpg",
+        "img": "/public/images/paleta-cuatro-bis.png",
         "cantidad":1
     },
 
@@ -40,7 +40,7 @@
         "marca": "Paleta Dunlop",
         "modelo": "Pádel Hire",
         "precio": 7078,
-        "img": "/public/images/paleta-cinco.jpg",
+        "img": "/public/images/paleta-cinco-bis.png",
         "cantidad":1
     },
 
@@ -49,7 +49,7 @@
         "marca": "Paleta Adiddas",
         "modelo": "RX 200 Light",
         "precio": 19936,
-        "img": "/public/images/paleta-seis.jpg",
+        "img": "/public/images/paleta-seis-bis.png",
         "cantidad":1
     },
 
@@ -58,7 +58,7 @@
         "marca": "Paleta Vairo",
         "modelo": "Grove 5.3",
         "precio": 20199,
-        "img": "/public/images/paleta-siete.jfif",
+        "img": "/public/images/paleta-siete-bis.png",
         "cantidad":1
     },
     {
@@ -66,7 +66,7 @@
         "marca": "Paleta Wilson",
         "modelo": "Kaos Komp",
         "precio": 42499,
-        "img": "/public/images/paleta-ocho.jfif",
+        "img": "/public/images/paleta-ocho-bis.png",
         "cantidad":1
     },
     {
@@ -74,7 +74,7 @@
         "marca": "Paleta Bullpadel",
         "modelo": "Heat Foam",
         "precio": 29200,
-        "img": "/public/images/paleta-nueve.jpg",
+        "img": "/public/images/paleta-nueve-bis.png",
         "cantidad":1
     }
 ]

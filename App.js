@@ -12,12 +12,11 @@ export const mostrarProductos = async () => {
     div.classList.add('card');
     div.innerHTML += `<div class="card-image">
                         <img src=${producto.img}>
-                        <span class="card-title">${producto.marca}</span>
-                        <a class="btn-floating halfway-fab wabes-effect waves-light red" id=boton${producto.id}><i class="material-icons">add_shopping_cart</i></a>
                       </div>
                       <div class="card-content">
-                      <p>${producto.modelo}</p>
+                      <h3 class="card-title">${producto.marca}</h3>
                       <p>Precio: ${producto.precio} </p>
+                      <a class="btn-floating halfway-fab wabes-effect waves-light red" id=boton${producto.id}><i class="material-icons">add_shopping_cart</i></a>
                       </div>
                      `
     contenedorProductos.appendChild(div);
